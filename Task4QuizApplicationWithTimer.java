@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Task5QuizApplicationWithTimer {
+public class Task4QuizApplicationWithTimer {
     private static int score = 0;
     private static int currentQuestion = 0;
     private static String[][] questions = {
