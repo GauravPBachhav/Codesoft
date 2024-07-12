@@ -1,3 +1,4 @@
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -20,8 +21,14 @@ public class Task1NumberGuessingGame {
 
             while (attempts < maxAttempts) {
                 System.out.print("Enter your guess: ");
+
+                // Validate if the input is an integer
+                while (!scanner.hasNextInt()) {
+                    System.out.println("Invalid input! Please enter a valid integer.");
+                    scanner.next(); // Consume invalid input
+                }
                 int userGuess = scanner.nextInt();
-                scanner.nextLine();
+                scanner.nextLine(); // Consume newline character after nextInt()
 
                 attempts++;
 
@@ -41,8 +48,8 @@ public class Task1NumberGuessingGame {
             }
 
             System.out.print("Do you want to play again? (yes/no): ");
-            String playAgainInput = scanner.nextLine();
-            playAgain = playAgainInput.equalsIgnoreCase("yes");
+            String playAgainInput = scanner.nextLine().toLowerCase(); // Convert input to lowercase
+            playAgain = playAgainInput.equals("yes") || playAgainInput.equals("y");
         }
 
         System.out.println("Game over! Your score: " + score);
