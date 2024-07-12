@@ -105,7 +105,7 @@ class Student {
     }
 }
 
-public class Task_4_StudentCourseRegistrationSystem {
+public class Task_5_StudentCourseRegistrationSystem {
     private List<Student> students;
     private List<Course> courses;
 
